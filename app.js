@@ -1,8 +1,10 @@
 var express = require('express');
 var logger = require('morgan');
-const cors = require('cors')
-
+var cors = require('cors')
 var ordersRouter = require('./routes/orders');
+
+require('dotenv').config();
+require('./config/database');
 
 var app = express();
 
