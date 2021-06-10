@@ -8,12 +8,13 @@ module.exports = {
 };
 
 function index(req, res) {
-    Order.find({}, function(err, skills) {
+    Order.find({}, function(err, orders) {
       res.status(200).json(orders);
     });
 }
 
 function create(req, res) {
+    console.log('create controller',req.body)
     Order.create(req.body, function(err, order) {
       res.status(201).json(order);
     });

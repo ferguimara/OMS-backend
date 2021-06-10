@@ -5,10 +5,7 @@ const orderSchema = new Schema({
     date: String,
     product: String,
     price: String,
-    status: {
-        type: String,
-        enum: ['For Sale', 'Out of Stock', 'Pending']
-    }
+    status: String,
 }, { timestamps: true });
 
-module.exports = mongoose.model('Skill', skillSchema);
+module.exports = mongoose.model('Order', orderSchema);
