@@ -6,6 +6,7 @@ const orderSchema = new Schema({
     product: String,
     price: String,
     status: String,
+    uid: String,
 }, { timestamps: true });
 
 module.exports = mongoose.model('Order', orderSchema);
